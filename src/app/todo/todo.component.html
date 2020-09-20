@@ -1,0 +1,16 @@
+<div class="todo-card">
+  <div [style.textDecoration]="textDecoration" class="todo-text">
+    <mat-checkbox [(ngModel)]="todo.active" (change)="activeChange()">
+      <mat-label></mat-label>
+     </mat-checkbox>
+    <div (click)="editTodo()" *ngIf="!toggleEdit">{{todo.todo}}</div>
+    <mat-form-field *ngIf="toggleEdit">
+      <input (blur)="saveEditChange()" matInput [(ngModel)]="todo.todo"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <button color="primary" mat-icon-button (click)="editTodo()"><mat-icon>edit</mat-icon></button>
+    <button color="primary" mat-icon-button (click)="deleteTodo()"><mat-icon>delete</mat-icon></button>
+  </div>
+</div>
+<mat-divider></mat-divider>

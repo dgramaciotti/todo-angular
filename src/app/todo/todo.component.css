@@ -1,0 +1,19 @@
+.todo-card{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left:2rem;
+}
+.todo-text{
+  display:flex;
+  align-items: center;
+  margin-right:1.5rem;
+  margin-left: 1.5rem;
+  min-width:300px;
+}
+.todo-text mat-checkbox{
+  margin-right: 1.5rem;
+}
+mat-divider {
+  width: 100%;
+}
